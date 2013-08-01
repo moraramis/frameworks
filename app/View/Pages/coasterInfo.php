@@ -6,7 +6,7 @@
 	$model = new coasterModel(MY_DSN, MY_USER, MY_PASS);
 	$view = new coasterView();
 	$view->showHeader("Rollercoaster Database");
-	$view->showCoaster($model->getInfo());
+	$view->showCoasterDetails($model->getCoasterDetails($_GET["id"]));
 	$view->showFooter();
 	
 ?>
